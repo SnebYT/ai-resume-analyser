@@ -5,4 +5,8 @@ import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
   plugins: [tailwindcss(), reactRouter(), tsconfigPaths()],
+  ssr: {
+    // this tells Vite to include zustand in the SSR bundle (so `react` is found)
+    noExternal: ['zustand']
+  }
 });
