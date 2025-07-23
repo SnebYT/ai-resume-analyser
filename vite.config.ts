@@ -8,5 +8,8 @@ export default defineConfig({
   ssr: {
     // this tells Vite to include zustand in the SSR bundle (so `react` is found)
     noExternal: ['zustand']
-  }
+  },
+  build: {
+    outDir: 'dist',
+  },
 });

@@ -1,4 +1,12 @@
+# netlify.toml
+[build]
+command = "npm run build"
+publish = "build/client"
+
+[dev]
+command = "npm run dev"
+
 [[redirects]]
-from="/*"
-to="{base URL of your site}"
-status=200
+from = "/*"
+to = "/index.html"
+status = 200
